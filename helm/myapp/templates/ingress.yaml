@@ -57,7 +57,6 @@ spec:
                 name: {{ .name }}-sampling
                 port:
                   name: use-annotation
-                {{- end }}
                 {{- else }}
                 name: {{ .name }}
                 port:
@@ -66,13 +65,5 @@ spec:
               {{- end }}
               {{- end }}
     {{- end }}
-    # - http:
-    #     paths:
-    #       - path: /
-    #         pathType: Exact # Prefix | Exact
-    #         backend:
-    #           service:
-    #             name: myapp-sampling
-    #             port:
-    #               name: use-annotation
+{{- end }}
 {{- end }}
